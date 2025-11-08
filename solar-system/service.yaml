@@ -8,6 +8,6 @@ spec:
     app: solar-system
   ports:
     - port: 80
-      targetPort: 9070
+      targetPort: 80
       protocol: TCP
   type: ClusterIP
