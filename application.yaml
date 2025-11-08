@@ -8,7 +8,7 @@ spec:
 
   source:
     repoURL: https://github.com/ShoroukNabil/argocd-dynamic-solar-system.git
-    targetRevision: main
+    targetRevision: master
     path: solar-system
 
   destination:
