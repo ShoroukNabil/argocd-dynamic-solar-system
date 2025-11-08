@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solar-system
+  labels:
+    app: solar-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: solar-system
+  template:
+    metadata:
+      labels:
+        app: solar-system
+    spec:
+      containers:
+        - name: solar-system
+          image: your-docker-registry/solar-syshoroukimage/dynamic-solar-system:v1
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
