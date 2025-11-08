@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: solar-system
-          image: your-docker-registry/solar-syshoroukimage/dynamic-solar-system:v1
+          image: shoroukimage/dynamic-solar-system:v1
           ports:
             - containerPort: 80
           imagePullPolicy: Always
