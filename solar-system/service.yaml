@@ -9,5 +9,5 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      protocol: TCP
-  type: ClusterIP
+      nodePort: 31000
+  type: NodePort
