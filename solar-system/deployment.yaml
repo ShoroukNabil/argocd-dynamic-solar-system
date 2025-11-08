@@ -6,7 +6,7 @@ metadata:
   labels:
     app: solar-system
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: solar-system
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: solar-system
-          image: shoroukimage/dynamic-solar-system:v1
+          image: shoroukimage/dynamic-solar-system:v2
           ports:
             - containerPort: 80
           imagePullPolicy: Always
