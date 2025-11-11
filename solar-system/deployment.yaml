@@ -2,11 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: solar-system
-  namespace: argocd
   labels:
     app: solar-system
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: solar-system
@@ -17,7 +16,6 @@ spec:
     spec:
       containers:
         - name: solar-system
-          image: shoroukimage/dynamic-solar-system:v1
+          image: shorouknabil/dynamic-solar-system:v1   # ← YOUR IMAGE
           ports:
             - containerPort: 80
-          imagePullPolicy: Always
