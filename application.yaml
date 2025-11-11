@@ -1,20 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: solar-system
+  name: solar-system-app
   namespace: argocd
 spec:
   project: default
-
   source:
     repoURL: https://github.com/ShoroukNabil/argocd-dynamic-solar-system.git
-    targetRevision: master
-    path: solar-system
-
+    targetRevision: main
+    path: .
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
-
+    namespace: solar-system
   syncPolicy:
     automated:
       prune: true
