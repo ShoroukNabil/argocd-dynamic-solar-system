@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: solar-system
-          image: shorouknabil/dynamic-solar-system:v1   # ← YOUR IMAGE
+          image: shoroukimage/dynamic-solar-system:v1   # ← YOUR IMAGE
           ports:
             - containerPort: 80
